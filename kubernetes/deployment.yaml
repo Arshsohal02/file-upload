@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-server-deployment
+spec:
+  replicas: 2  # Set the desired number of replicas as needed
+  selector:
+    matchLabels:
+      app: web-server
+  template:
+    metadata:
+      labels:
+        app: web-server
+    spec:
+      containers:
+        - name: web-server
+          image: arshsohal02/file-upload:latest  # Replace with your Docker image and tag
+          ports:
+            - containerPort: 3000  # Port your web server is listening on
