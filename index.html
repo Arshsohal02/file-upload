@@ -23,7 +23,7 @@
             const formData = new FormData();
             formData.append("file", fileInput.files[0]);
 
-            fetch("http://localhost:3000/upload", {
+            fetch("https://file-upload-three-self.vercel.app//upload", {
                 method: "POST",
                 body: formData,
             })
