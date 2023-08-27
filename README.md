@@ -9,6 +9,7 @@ Before you begin setting up and running the File Upload and Information Retrieva
 
 ****Endpoints****
 https://file-upload-arsh.vercel.app/
+
 **Endpoint:** /
 
 **HTTP Method:** GET
