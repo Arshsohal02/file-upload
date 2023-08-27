@@ -4,8 +4,6 @@
 
 **Description:** This project involves the development of a REST API-based web server hosted on a local machine. The web server is designed to accept file uploads and provide detailed information about the uploaded files. It offers a user-friendly interface for interacting with the server.
 
-**Prerequisites**
-Before you begin setting up and running the File Upload and Information Retrieval Web Server, ensure you have met the following prerequisites:
 
 ****Endpoints****
 https://file-upload-arsh.vercel.app/
@@ -39,6 +37,9 @@ HTTP Status 400 Bad Request (No file uploaded):
 
 HTTP Status 500 Internal Server Error (Error determining file type):
 ![image](https://github.com/Arshsohal02/file-upload/assets/92908868/7ef8330d-26a0-4810-a50e-a674e594f662)
+
+**Prerequisites**
+Before you begin setting up and running the File Upload and Information Retrieval Web Server, ensure you have met the following prerequisites:
 
 **Software Requirements**
 **Node.js:** The project is built using Node.js, so you need to have it installed on your machine. You can download it from the official Node.js website.
