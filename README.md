@@ -1,4 +1,3 @@
-# file-upload
 
 # Project Overview
 **Project Name:** File Upload and Information Retrieval Web Server
