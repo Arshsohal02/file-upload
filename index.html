@@ -2,15 +2,22 @@
 <html>
 <head>
     <title>File Upload Test</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
 </head>
 <body>
     <h1>File Upload Test</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="file" id="file">
-        <input type="button" value="Upload File" onclick="uploadFile()">
-    </form>
-    
-    <div id="fileInfo" style="display: none;">
+    <div id="uploadForm">
+        <form id="fileUploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput">
+            <br>
+            <input type="button" value="Upload File" id="uploadButton" onclick="uploadFile()">
+        </form>
+    </div>
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+    <div id="fileInfo">
         <h2>File Information:</h2>
         <p><strong>Name:</strong> <span id="fileName"></span></p>
         <p><strong>Type:</strong> <span id="fileType"></span></p>
@@ -19,10 +26,11 @@
 
     <script>
         function uploadFile() {
-            const fileInput = document.getElementById("file");
+            const fileInput = document.getElementById("fileInput");
             const formData = new FormData();
             formData.append("file", fileInput.files[0]);
-
+            const loadingSpinner = document.getElementById("loading");
+            loadingSpinner.style.display = "block";
             fetch("https://file-upload-arsh.vercel.app/upload", {
                 method: "POST",
                 body: formData,
@@ -39,9 +47,12 @@
                     fileSizeSpan.textContent = data.size;
 
                     fileInfoDiv.style.display = "block";
+                    loadingSpinner.style.display = "none";
                 })
                 .catch((error) => {
                     console.error("Error uploading file:", error);
+                    alert(error.message);
+                    loadingSpinner.style.display = "none";
                 });
         }
     </script>
