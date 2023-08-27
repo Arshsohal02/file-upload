@@ -10,17 +10,26 @@ Before you begin setting up and running the File Upload and Information Retrieva
 ****Endpoints****
 https://file-upload-arsh.vercel.app/
 **Endpoint:** /
+
 **HTTP Method:** GET
+
 **Description:** This endpoint provides a welcome message to confirm that the API is running.
 
 **File Upload**
+
 **Endpoint:** /upload
+
 **HTTP Method:** POST
+
 **Description:** Use this endpoint to upload a file to the server. The server processes the uploaded file and provides detailed information about it.
+
 **Request**
 POST /upload
+
 **Content-Type:** multipart/form-data
+
 **Response**
+
 HTTP Status 200 OK:
 ![image](https://github.com/Arshsohal02/file-upload/assets/92908868/bc6ef7cf-dc0b-4261-8c1f-6d5e102e290a)
 
