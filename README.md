@@ -4,6 +4,37 @@
 
 **Description:** This project involves the development of a REST API-based web server hosted on a local machine. The web server is designed to accept file uploads and provide detailed information about the uploaded files. It offers a user-friendly interface for interacting with the server.
 
+**Prerequisites**
+Before you begin setting up and running the File Upload and Information Retrieval Web Server, ensure you have met the following prerequisites:
+
+****Endpoints****
+https://file-upload-arsh.vercel.app/
+**Endpoint:** /
+**HTTP Method:** GET
+**Description:** This endpoint provides a welcome message to confirm that the API is running.
+
+**File Upload**
+**Endpoint:** /upload
+**HTTP Method:** POST
+**Description:** Use this endpoint to upload a file to the server. The server processes the uploaded file and provides detailed information about it.
+**Request**
+POST /upload
+**Content-Type:** multipart/form-data
+**Response**
+HTTP Status 200 OK:
+![image](https://github.com/Arshsohal02/file-upload/assets/92908868/bc6ef7cf-dc0b-4261-8c1f-6d5e102e290a)
+
+HTTP Status 400 Bad Request (No file uploaded):
+![image](https://github.com/Arshsohal02/file-upload/assets/92908868/1952ace8-ba98-4ffe-874a-14c4468eeab2)
+
+HTTP Status 500 Internal Server Error (Error determining file type):
+![image](https://github.com/Arshsohal02/file-upload/assets/92908868/7ef8330d-26a0-4810-a50e-a674e594f662)
+
+**Software Requirements**
+**Node.js:** The project is built using Node.js, so you need to have it installed on your machine. You can download it from the official Node.js website.
+**Docker:** If you plan to build and run the project using Docker containers, make sure you have Docker installed. You can download Docker Desktop for your operating system from the Docker website.
+**Kubernetes** : If you intend to deploy the web server on a Kubernetes cluster, ensure you have access to a Kubernetes cluster and kubectl command-line tool installed.
+
 ****Key Features:****
 
 **File Upload**: Users can upload files of various types and sizes to the web server.
